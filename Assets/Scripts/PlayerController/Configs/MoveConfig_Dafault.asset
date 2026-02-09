@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31acde32c317e224287341f24efd2642, type: 3}
+  m_Name: MoveConfig_Dafault
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  sprintSpeed: 6
+  maxSprintSpeed: 7
+  maxMoveSpeed: 4.96
+  acceleration: 20
+  deceleration: 20
+  airAcceleration: 8
+  airDeceleration: 2
+  airControlFactor: 0.8
