@@ -143,11 +143,14 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         JumpFlower _flower = collision.gameObject.GetComponent<JumpFlower>();
+        EvolutionElement _EvolutuionElementFire=collision.gameObject.GetComponent<EvolutionElement>();
      
         if (_flower != null && _rb.linearVelocity.y <= 0f)
         {
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _flower.BounceForce);
         }
+        
+
     }
 
     /// <summary>
@@ -217,10 +220,13 @@ public class PlayerController : MonoBehaviour
 
         JumpData = BuildJumpData(JumpData);
         Debug.Log("kurz vor springen");
+        var jumpAudio=GetComponent<AudioSource>();
+        
         if (_jumpBehaviour.Jump(JumpData))
         {
             Debug.Log(" gesprungen einmal");
             _jumpBufferCounter = 0f;
+        jumpAudio.Play();
         }
     }
 

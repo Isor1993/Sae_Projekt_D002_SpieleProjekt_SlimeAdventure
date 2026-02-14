@@ -1,5 +1,4 @@
-using System.Linq;
-using UnityEditor.Rendering;
+
 using UnityEngine;
 
 public class SkyController : MonoBehaviour
