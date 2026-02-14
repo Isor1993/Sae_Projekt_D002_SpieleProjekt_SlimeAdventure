@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bd2a0019abc84914bb543e6cf08995a0
+guid: 5a164b182c4d8634da7acf8ad4deb1d8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7755864243994306313
-    second: ChatGPT Image 8. Feb. 2026, 10_15_22_0
+      213: -5754803216532412955
+    second: GrassTest_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,11 +48,11 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 80, y: 387, z: 73, w: 402}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,41 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ground_01
+      name: GrassTest_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 352
-        width: 1422
-        height: 334
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 14, y: 36, z: 20, w: 107}
+        x: 10
+        y: 336
+        width: 1435
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 85, y: 0, z: 76, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: 693, y: -106}
-        - {x: 692, y: 60}
-        - {x: -681, y: 58}
-        - {x: -683, y: -22}
-        - {x: -651, y: -114}
-        - {x: -597, y: -117}
-        - {x: -518, y: -142}
-        - {x: 576, y: -144}
-        - {x: 620, y: -118}
-      - - {x: 543, y: 119}
-        - {x: 543, y: 120}
-        - {x: 546, y: 120}
-        - {x: 547, y: 119}
-      - - {x: 552, y: 115}
-        - {x: 551, y: 115}
-        - {x: 550, y: 116}
-        - {x: 553, y: 116}
-        - {x: 553, y: 114}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: 9072f65007d52ab60800000000000000
-      internalID: 7755864243994306313
+      spriteID: 5e56f4ef6f4d220b0800000000000000
+      internalID: -5754803216532412955
       vertices: []
       indices: 
       edges: []
@@ -143,8 +125,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 845de08bb7ded7c45b1f43774dc5fca5
-    internalID: -592516530
+    spriteID: b4602b82f75deb14e97ec198d28d011d
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -153,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ground_01: 7755864243994306313
+      GrassTest_0: -5754803216532412955
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

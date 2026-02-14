@@ -140,6 +140,16 @@ public class PlayerController : MonoBehaviour
         UpdateInput();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        JumpFlower _flower = collision.gameObject.GetComponent<JumpFlower>();
+     
+        if (_flower != null && _rb.linearVelocity.y <= 0f)
+        {
+            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _flower.BounceForce);
+        }
+    }
+
     /// <summary>
     /// Handles transitions related to entering or leaving the ground.
     /// </summary>
