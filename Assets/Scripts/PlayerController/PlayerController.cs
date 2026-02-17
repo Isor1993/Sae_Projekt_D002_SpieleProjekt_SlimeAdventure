@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
         {
             ResetGroundJumpCounter();
             ResetAirJumpCounter();
-            Debug.Log("Player landed on Ground.");
+            //Debug.Log("Player landed on Ground.");
         }
         if (JustLeftGround)
         {
@@ -219,12 +219,12 @@ public class PlayerController : MonoBehaviour
             return;
 
         JumpData = BuildJumpData(JumpData);
-        Debug.Log("kurz vor springen");
+        //Debug.Log("kurz vor springen");
         var jumpAudio=GetComponent<AudioSource>();
         
         if (_jumpBehaviour.Jump(JumpData))
         {
-            Debug.Log(" gesprungen einmal");
+           // Debug.Log(" gesprungen einmal");
             _jumpBufferCounter = 0f;
         jumpAudio.Play();
         }
@@ -275,7 +275,7 @@ public class PlayerController : MonoBehaviour
     private void ResetAirJumpCounter()
     {
         _jumpBehaviour.ResetJumpCountAir();
-        Debug.Log("[JumpCountAir] is reseted.");
+      //  Debug.Log("[JumpCountAir] is reseted.");
     }
 
     /// <summary>
@@ -284,7 +284,7 @@ public class PlayerController : MonoBehaviour
     private void ResetGroundJumpCounter()
     {
         _jumpBehaviour.ResetJumpCountGround();
-        Debug.Log($"[JumpCountGround] is reseted.");
+       // Debug.Log($"[JumpCountGround] is reseted.");
     }
 
     /// <summary>

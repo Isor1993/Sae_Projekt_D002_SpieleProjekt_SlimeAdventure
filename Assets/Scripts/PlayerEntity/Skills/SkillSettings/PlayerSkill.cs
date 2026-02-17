@@ -1,60 +1,119 @@
-
-using NUnit.Framework;
-using System.Collections.Generic;
+/*****************************************************************************
+* Project : Spielprojekt (K1, S1, S2, S3)
+* File    : 
+* Date    : 20.02.2026
+* Author  : Eric Rosenberg
+*
+* Description :
+* *
+* History :
+* 20.02.2026 ER Created
+******************************************************************************/
 using UnityEngine;
 
-public class PlayerSkill : MonoBehaviour
+public class PlayerSkill
 {
-    [SerializeField] List<Skilldata> _allSkills = new List<Skilldata>();
+    private Skilldata _baseData;
     private SlimeType _type;
     private string _name;
-    private int _baseDamage;
-    private int _currentDamage;
+    private int _damage;
     private GameObject _bulletPrefab;
-
 
     public SlimeType Type => _type;
     public string Name => _name;
-    public int BaseDamage => _baseDamage;
-    public int CurrentDamage => _currentDamage;
+    public int Damage => _damage;
     public GameObject BulletPrefab => _bulletPrefab;
 
-    private PlayerSkill _skills;
-
-    private void Awake()
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="data"></param>
+    public PlayerSkill(Skilldata data)
     {
+        _baseData = data;
+        if (data == null)
+        {
+            Debug.Log($"{nameof(PlayerSkill)} : Skilldata not avaible.");
+            return;
+        }
+        ResetSkill();
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="projectilePrefab"></param>
+    /// <param name="spawnPoint"></param>
+    public void Cast( Vector3 spawnPoint)
+    {
+        GameObject projectile = GameObject.Instantiate(_bulletPrefab, spawnPoint, Quaternion.identity);
+        Bullet bullet=projectile.GetComponentInChildren<Bullet>();
+        if (bullet == null)
+            return;
+        bullet.Initialize(_damage);
        
+#if DEBUG
+        Debug.Log($"Cast {_name} with Projectile {projectile.name} with [{_damage}]");
+#endif
     }
-    private void Start()
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    public void ResetSkill()
     {
-        
+        _type = _baseData.Type;
+        _name = _baseData.Name;
+        _damage = _baseData.BaseDamage;
+        _bulletPrefab = _baseData.BulletPrefab;
+    }
 
-    }
-    private void Update()
-    {       
-        
-    }
-    public void ChangeType(SlimeType type)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="type"></param>
+    public void SetType(SlimeType type)
     {
-        _type = type; 
+        _type = type;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="name"></param>
+    public void ChangeName(string name)
+    {
+        _name = name;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="damage"></param>
     public void AddDamage(int damage)
     {
-        _currentDamage+=damage;
+        _damage += damage;
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="damage"></param>
     public void ReduceDamage(int damage)
     {
-        _currentDamage -= damage;
-        if(_currentDamage<0)
+        _damage -= damage;
+        if (damage < 0)
         {
-            _currentDamage=0;
+            _damage = 0;
         }
     }
 
-    public void ChangeBulletPrefab(GameObject bulletPrefab)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="bulletPrefab"></param>
+    public void SetBulletPrefab(GameObject bulletPrefab)
     {
         _bulletPrefab = bulletPrefab;
     }
-
 }

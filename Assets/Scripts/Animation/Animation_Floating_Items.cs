@@ -68,7 +68,7 @@ public class Animation_Floating_Items : MonoBehaviour
         Vector2 newPos = Vector2.Lerp(_currenPosition, _targetPos, _t);
         transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
 
-        Debug.Log(_currentAnimationPosIndex);
+        
         if (_t >= 1)
         {
             AdvanceStep();

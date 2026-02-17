@@ -57,7 +57,7 @@ public class JumpBehaviour
         {
             PerformJumpPhysic();
             _groundJumpAvailable = false;
-            Debug.Log("Player jumped from Ground.");
+            //Debug.Log("Player jumped from Ground.");
             return true;
         }
         if (CanWallJump(JumpState.IsTouchingWall, JumpState.IsGrounded, JumpState.WallJumpEnabled))

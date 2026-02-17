@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FireShoot
   m_EditorClassIdentifier: 
   _type: 0
-  _name: 
-  _damage: 0
+  _name: FireShoot
+  _baseDamage: 0
   _bulletPrefab: {fileID: 0}

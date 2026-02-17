@@ -12,10 +12,13 @@ public class Skilldata : ScriptableObject
     [SerializeField] private string _name;
 
     [Tooltip("Damage value of skill.")]
-    [SerializeField] private int _damage;
+    [SerializeField] private int _baseDamage;
        
     [Tooltip("GameObject of bullet which the skill is shooting.")]
     [SerializeField] private GameObject _bulletPrefab;
+     
+
+  
 
     /// <summary>
     /// 
@@ -30,8 +33,10 @@ public class Skilldata : ScriptableObject
     /// <summary>
     /// 
     /// </summary>
-    public int Damage => _damage;
-       
+    public int BaseDamage => _baseDamage;
+
+   
+
     /// <summary>
     /// 
     /// </summary>

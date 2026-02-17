@@ -1776,6 +1776,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1047034917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047034907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b4d6712a6f04b4296940c63cf4f18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _allSkills:
+  - {fileID: 11400000, guid: 98ab06862bf72d34abb5d0173cc9f59e, type: 2}
+  - {fileID: 11400000, guid: b5c63ae60621a2a4bb3bb2f567f19ced, type: 2}
+  _startingPlayerSkills:
+  - {fileID: 11400000, guid: 98ab06862bf72d34abb5d0173cc9f59e, type: 2}
 --- !u!1001 &1056605605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2610,6 +2627,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2022355626713809517, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1047034916}
+    - targetCorrespondingSourceObject: {fileID: 2022355626713809517, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1047034917}
   m_SourcePrefab: {fileID: 100100000, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
 --- !u!4 &1602660870 stripped
 Transform:
@@ -3020,29 +3040,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1721294445}
-  - component: {fileID: 1721294444}
   m_Layer: 6
-  m_Name: SkillData
+  m_Name: PlayerSkills
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1721294444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721294443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 412bd31f82f7a1b49ae227b0e948e5b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillData:
-  - {fileID: 11400000, guid: 98ab06862bf72d34abb5d0173cc9f59e, type: 2}
-  - {fileID: 11400000, guid: b5c63ae60621a2a4bb3bb2f567f19ced, type: 2}
 --- !u!4 &1721294445
 Transform:
   m_ObjectHideFlags: 0
