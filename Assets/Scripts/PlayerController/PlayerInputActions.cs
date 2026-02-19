@@ -120,7 +120,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Push"",
+                    ""name"": ""Attack"",
                     ""type"": ""Button"",
                     ""id"": ""610278df-f47a-4ef8-bff9-cba12bc71f2d"",
                     ""expectedControlType"": """",
@@ -214,7 +214,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Push"",
+                    ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -228,7 +228,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Slime_Move = m_Slime.FindAction("Move", throwIfNotFound: true);
         m_Slime_Jump = m_Slime.FindAction("Jump", throwIfNotFound: true);
         m_Slime_Sprint = m_Slime.FindAction("Sprint", throwIfNotFound: true);
-        m_Slime_Push = m_Slime.FindAction("Push", throwIfNotFound: true);
+        m_Slime_Attack = m_Slime.FindAction("Attack", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -312,7 +312,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Slime_Move;
     private readonly InputAction m_Slime_Jump;
     private readonly InputAction m_Slime_Sprint;
-    private readonly InputAction m_Slime_Push;
+    private readonly InputAction m_Slime_Attack;
     /// <summary>
     /// Provides access to input actions defined in input action map "Slime".
     /// </summary>
@@ -337,9 +337,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Sprint => m_Wrapper.m_Slime_Sprint;
         /// <summary>
-        /// Provides access to the underlying input action "Slime/Push".
+        /// Provides access to the underlying input action "Slime/Attack".
         /// </summary>
-        public InputAction @Push => m_Wrapper.m_Slime_Push;
+        public InputAction @Attack => m_Wrapper.m_Slime_Attack;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -375,9 +375,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Sprint.started += instance.OnSprint;
             @Sprint.performed += instance.OnSprint;
             @Sprint.canceled += instance.OnSprint;
-            @Push.started += instance.OnPush;
-            @Push.performed += instance.OnPush;
-            @Push.canceled += instance.OnPush;
+            @Attack.started += instance.OnAttack;
+            @Attack.performed += instance.OnAttack;
+            @Attack.canceled += instance.OnAttack;
         }
 
         /// <summary>
@@ -398,9 +398,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Sprint.started -= instance.OnSprint;
             @Sprint.performed -= instance.OnSprint;
             @Sprint.canceled -= instance.OnSprint;
-            @Push.started -= instance.OnPush;
-            @Push.performed -= instance.OnPush;
-            @Push.canceled -= instance.OnPush;
+            @Attack.started -= instance.OnAttack;
+            @Attack.performed -= instance.OnAttack;
+            @Attack.canceled -= instance.OnAttack;
         }
 
         /// <summary>
@@ -463,11 +463,11 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSprint(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Push" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Attack" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnPush(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
     }
 }

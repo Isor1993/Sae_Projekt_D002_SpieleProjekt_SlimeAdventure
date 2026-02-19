@@ -29,10 +29,14 @@ public class Goblin : MonoBehaviour,IDamageable
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.TryGetComponent<IDamageable>(out var damageable))
+        PlayerEntity player=collision.gameObject.GetComponentInChildren<PlayerEntity>();
+        if (player == null)
         {
-            damageable.TakeDamge(_damage);
+            return;
         }
+        
+            player.TakeDamge(_damage);
+        
     }
 
 

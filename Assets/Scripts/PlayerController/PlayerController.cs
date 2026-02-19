@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private GroundCheck _groundCheck;
     [SerializeField] private WallCheck _wallCheck;
+    [SerializeField] private PlayerSkillSystem _skillSystem;
 
     private MoveBehaviour _movement;
     private JumpBehaviour _jumpBehaviour;
@@ -88,6 +89,7 @@ public class PlayerController : MonoBehaviour
     private InputAction _move;
     private InputAction _jump;
     private InputAction _sprint;
+    private InputAction _attack;
 
     /// <summary>
     /// Initializes input mappings and behaviour components.
@@ -142,9 +144,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        JumpFlower _flower = collision.gameObject.GetComponent<JumpFlower>();
-        EvolutionElement _EvolutuionElementFire=collision.gameObject.GetComponent<EvolutionElement>();
-     
+        JumpFlower _flower = collision.gameObject.GetComponent<JumpFlower>();   
         if (_flower != null && _rb.linearVelocity.y <= 0f)
         {
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _flower.BounceForce);
@@ -192,7 +192,11 @@ public class PlayerController : MonoBehaviour
     public void UpdateInput()
     {
         _horizentalInput = _move.ReadValue<float>();
-
+        if(_attack.WasPressedThisFrame())
+        {
+            Vector3 dir = _horizentalInput > 0 ? new Vector3(1f, 0.3f,0f):new Vector3(-1f, 0.3f,0f);
+            _skillSystem.CastNormalShoot(dir);
+        }
         if (_jump.WasPressedThisFrame())
         {
             ResetJumpBuffer();
@@ -355,5 +359,6 @@ public class PlayerController : MonoBehaviour
         _move = _inputActions.Slime.Move;
         _jump = _inputActions.Slime.Jump;
         _sprint = _inputActions.Slime.Sprint;
+        _attack=_inputActions.Slime.Attack;
     }
 }

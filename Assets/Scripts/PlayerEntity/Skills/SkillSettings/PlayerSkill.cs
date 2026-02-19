@@ -18,6 +18,7 @@ public class PlayerSkill
     private string _name;
     private int _damage;
     private GameObject _bulletPrefab;
+    private Vector3 _dir;
 
     public SlimeType Type => _type;
     public string Name => _name;
@@ -44,13 +45,14 @@ public class PlayerSkill
     /// </summary>
     /// <param name="projectilePrefab"></param>
     /// <param name="spawnPoint"></param>
-    public void Cast( Vector3 spawnPoint)
+    public void Cast( Vector3 spawnPoint,Vector3 dir)
     {
+        _dir=dir;
         GameObject projectile = GameObject.Instantiate(_bulletPrefab, spawnPoint, Quaternion.identity);
         Bullet bullet=projectile.GetComponentInChildren<Bullet>();
         if (bullet == null)
             return;
-        bullet.Initialize(_damage);
+        bullet.Initialize(_damage,dir);
        
 #if DEBUG
         Debug.Log($"Cast {_name} with Projectile {projectile.name} with [{_damage}]");

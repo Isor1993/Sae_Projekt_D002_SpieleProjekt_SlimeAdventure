@@ -34,7 +34,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Push",
+                    "name": "Attack",
                     "type": "Button",
                     "id": "610278df-f47a-4ef8-bff9-cba12bc71f2d",
                     "expectedControlType": "",
@@ -128,7 +128,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Push",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -8,7 +8,8 @@ public enum SlimeType
 public class PlayerEntity : MonoBehaviour, IDamageable
 {
     [SerializeField] private Player_Inventory _inventory;
-    [SerializeField] private int _maxHP = 100;
+    [SerializeField] private int _maxHP = 1;
+    [SerializeField] private Vector2 _spawnPosition=new Vector2(0f,0.7f);
     private SlimeType _type;
     private int _currentHP;
     private bool _isAlive;
@@ -25,7 +26,10 @@ public class PlayerEntity : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        
+        if(!_isAlive)
+        {
+            Respawn(_spawnPosition);
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -46,5 +50,12 @@ public class PlayerEntity : MonoBehaviour, IDamageable
     {
         _isAlive = false;
         Debug.Log("Player Died");
+    }
+
+    public void Respawn(Vector2 spawnPosition)
+    {
+        _isAlive = true;
+        transform.position= spawnPosition;
+
     }
 }

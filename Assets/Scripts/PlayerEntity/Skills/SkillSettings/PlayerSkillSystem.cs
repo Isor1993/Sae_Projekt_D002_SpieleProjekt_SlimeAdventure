@@ -37,17 +37,15 @@ public class PlayerSkillSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            CastNormalShoot();
-        }
+        
     }
 
-    public void CastNormalShoot()
+    public void CastNormalShoot(Vector3 dir)
     {
         var bullet = _playerSkills[0].BulletPrefab;
-        _shootPoint = transform.position + new Vector3(1f, 0.3f, 0f);
-        _playerSkills[0].Cast( _shootPoint);
+        _shootPoint = transform.position + dir;
+        Debug.Log($"poition[{transform.position}] + dir[{dir}]={_shootPoint}");
+        _playerSkills[0].Cast( _shootPoint,dir);
     }
 
     public void AddSkill(Skilldata skillData)

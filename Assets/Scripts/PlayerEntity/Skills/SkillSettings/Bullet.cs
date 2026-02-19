@@ -5,57 +5,71 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float _range = 5f;
     [SerializeField] private float _speed = 2f;
-    private Skilldata _bulletData;
+   
 
     private Rigidbody2D _rb;
-    private Vector2 _startPosition;
-    private bool _isMoving = true;
+    private Vector2 _startPosition;    
     private int _damage;
+    private Vector3 _dir;
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();
-       
-       
+        _rb = GetComponent<Rigidbody2D>();     
     }
 
     private void Start()
     {
-        
-
-        _rb.linearVelocity=transform.right*_speed;
+                
     }
     private void FixedUpdate()
-    {        
+    {
+        BulletBehaviour();
+    }
+
+    private void BulletBehaviour()
+    {
         
-        float distance=Vector2.Distance(_startPosition,transform.position);
+        float distance = Vector2.Distance(_startPosition, transform.position);
         if (distance >= _range)
         {
             StopBullet();
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Bullet hit: " + collision.name);
         if (collision.TryGetComponent<IDamageable>(out var damageable))
         {
-            Debug.Log(_damage);
-            damageable.TakeDamge(_damage);
-            
+            if (!collision.gameObject.CompareTag("Player"))
+            {
+                damageable.TakeDamge(_damage);
+                StopBullet();
+            }           
+        
         }
-        StopBullet();
-    }   
+        else
+        {
+            StopBullet();
+        }
+
+    }
 
     public void StopBullet()
-    {
-        _isMoving = false;
+    {      
         _rb.linearVelocity = Vector2.zero;
         _rb.simulated = false;
     }
 
-    public void Initialize(int damage)
+    public void Initialize(int damage,Vector3 dir)
     {
-        _damage=damage;
-        Debug.Log($"{damage} bullet hit");
+        _rb.simulated = true;
+        _damage = damage;
+        _dir =dir.normalized;
+        Debug.Log(_dir);
+        _startPosition = transform.position;
+        Debug.Log(_startPosition);
+        _rb.linearVelocity = _dir * _speed;
+       
     }
 }
