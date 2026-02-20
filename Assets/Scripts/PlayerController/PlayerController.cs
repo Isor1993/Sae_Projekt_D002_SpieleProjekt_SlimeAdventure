@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     private float _horizentalInput = 0.0f;
     private float _coyoteTimeCounter = 0f;
     private float _jumpBufferCounter = 0f;
+    private float _lastDir = 1f;
     private bool _isGrounded = false;
     private bool _wasGrounded = false;
     private bool _isTouchingWall = false;
@@ -69,6 +70,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GroundCheck _groundCheck;
     [SerializeField] private WallCheck _wallCheck;
     [SerializeField] private PlayerSkillSystem _skillSystem;
+    [SerializeField] private PlayerEntity _playerEntity;
 
     private MoveBehaviour _movement;
     private JumpBehaviour _jumpBehaviour;
@@ -90,6 +92,7 @@ public class PlayerController : MonoBehaviour
     private InputAction _jump;
     private InputAction _sprint;
     private InputAction _attack;
+    private InputAction _changeElement;
 
     /// <summary>
     /// Initializes input mappings and behaviour components.
@@ -192,10 +195,20 @@ public class PlayerController : MonoBehaviour
     public void UpdateInput()
     {
         _horizentalInput = _move.ReadValue<float>();
+        
+
+        if (_horizentalInput != 0f)
+        {
+            _lastDir = _horizentalInput;
+        }
+        if(_changeElement.WasPressedThisFrame())
+        {
+            _playerEntity.ChangeSlimeElement();
+        }
         if(_attack.WasPressedThisFrame())
         {
-            Vector3 dir = _horizentalInput > 0 ? new Vector3(1f, 0.3f,0f):new Vector3(-1f, 0.3f,0f);
-            _skillSystem.CastNormalShoot(dir);
+           
+            _skillSystem.CastNormalShoot(_lastDir);
         }
         if (_jump.WasPressedThisFrame())
         {
@@ -360,5 +373,6 @@ public class PlayerController : MonoBehaviour
         _jump = _inputActions.Slime.Jump;
         _sprint = _inputActions.Slime.Sprint;
         _attack=_inputActions.Slime.Attack;
+        _changeElement=_inputActions.Slime.ChangeElement;
     }
 }

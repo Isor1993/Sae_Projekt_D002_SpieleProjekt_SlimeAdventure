@@ -1,76 +1,76 @@
 fileFormatVersion: 2
-guid: 48d5d1cff614b1e4096ebe52bcb38e3a
+guid: 9e70c38427559a04e87e26892c23b5e2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5224598711881962370
-    second: Idle Slime-0001-Sheet_0
+      213: -8510109081832668626
+    second: Idle SlimeFire-0001-Sheet_0
   - first:
-      213: -5932944149088821978
-    second: Idle Slime-0001-Sheet_1
+      213: -1614994531757665672
+    second: Idle SlimeFire-0001-Sheet_1
   - first:
-      213: 7399247369844634521
-    second: Idle Slime-0001-Sheet_2
+      213: 871695659302927731
+    second: Idle SlimeFire-0001-Sheet_2
   - first:
-      213: 6160928048758438849
-    second: Idle Slime-0001-Sheet_3
+      213: 7262903999234076381
+    second: Idle SlimeFire-0001-Sheet_3
   - first:
-      213: -8326637936209236976
-    second: Idle Slime-0001-Sheet_4
+      213: 3609421638669966613
+    second: Idle SlimeFire-0001-Sheet_4
   - first:
-      213: -5627521390543353484
-    second: Idle Slime-0001-Sheet_5
+      213: 8099257018890898861
+    second: Idle SlimeFire-0001-Sheet_5
   - first:
-      213: -6552891322855130990
-    second: Idle Slime-0001-Sheet_6
+      213: 132666416141442722
+    second: Idle SlimeFire-0001-Sheet_6
   - first:
-      213: 4790555335482589269
-    second: Idle Slime-0001-Sheet_7
+      213: 7304990055017629108
+    second: Idle SlimeFire-0001-Sheet_7
   - first:
-      213: 33476956199612306
-    second: Idle Slime-0001-Sheet_8
+      213: 7858994702096033564
+    second: Idle SlimeFire-0001-Sheet_8
   - first:
-      213: 6483015713798786752
-    second: Idle Slime-0001-Sheet_9
+      213: 7479654500242804217
+    second: Idle SlimeFire-0001-Sheet_9
   - first:
-      213: 5769881943893554037
-    second: Idle Slime-0001-Sheet_10
+      213: -4334614778766711677
+    second: Idle SlimeFire-0001-Sheet_10
   - first:
-      213: 6288425555837302954
-    second: Idle Slime-0001-Sheet_11
+      213: -6647169314401485295
+    second: Idle SlimeFire-0001-Sheet_11
   - first:
-      213: -3695978161404497409
-    second: Idle Slime-0001-Sheet_12
+      213: 5343961406473119704
+    second: Idle SlimeFire-0001-Sheet_12
   - first:
-      213: 5893332725750969818
-    second: Idle Slime-0001-Sheet_13
+      213: -1261964958306458137
+    second: Idle SlimeFire-0001-Sheet_13
   - first:
-      213: -7077909150854854170
-    second: Idle Slime-0001-Sheet_14
+      213: 8864393356820533956
+    second: Idle SlimeFire-0001-Sheet_14
   - first:
-      213: 2937346880905742461
-    second: Idle Slime-0001-Sheet_15
+      213: 9119230068062059835
+    second: Idle SlimeFire-0001-Sheet_15
   - first:
-      213: -945037331161264268
-    second: Idle Slime-0001-Sheet_16
+      213: 8784608299181570260
+    second: Idle SlimeFire-0001-Sheet_16
   - first:
-      213: -9194380086592278595
-    second: Idle Slime-0001-Sheet_17
+      213: -2038700010640320574
+    second: Idle SlimeFire-0001-Sheet_17
   - first:
-      213: 4898241297308393460
-    second: Idle Slime-0001-Sheet_18
+      213: -725687948720914061
+    second: Idle SlimeFire-0001-Sheet_18
   - first:
-      213: -233382557289680253
-    second: Idle Slime-0001-Sheet_19
+      213: -2469090185726714384
+    second: Idle SlimeFire-0001-Sheet_19
   - first:
-      213: -4495887584615545902
-    second: Idle Slime-0001-Sheet_20
+      213: 6965204678377584133
+    second: Idle SlimeFire-0001-Sheet_20
   - first:
-      213: 2063608259882603266
-    second: Idle Slime-0001-Sheet_21
+      213: 4359804304512351102
+    second: Idle SlimeFire-0001-Sheet_21
   - first:
-      213: 6421800207099312507
-    second: Idle Slime-0001-Sheet_22
+      213: -7512725172842887482
+    second: Idle SlimeFire-0001-Sheet_22
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -162,24 +162,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_0
+      name: Idle SlimeFire-0001-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -194,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 28310bbe8d0818840800000000000000
-      internalID: 5224598711881962370
+      spriteID: e22c989e0e406e980800000000000000
+      internalID: -8510109081832668626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_1
+      name: Idle SlimeFire-0001-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
@@ -216,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62d14510bb2f9ada0800000000000000
-      internalID: -5932944149088821978
+      spriteID: 872d26ca7036699e0800000000000000
+      internalID: -1614994531757665672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_2
+      name: Idle SlimeFire-0001-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
-        height: 63
+        height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,14 +225,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 99335dca7486fa660800000000000000
-      internalID: 7399247369844634521
+      spriteID: 37d300d6592e81c00800000000000000
+      internalID: 871695659302927731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_3
+      name: Idle SlimeFire-0001-Sheet_3
       rect:
         serializedVersion: 2
         x: 192
@@ -260,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1cbbcf81b63008550800000000000000
-      internalID: 6160928048758438849
+      spriteID: dde6c10f4b40bc460800000000000000
+      internalID: 7262903999234076381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_4
+      name: Idle SlimeFire-0001-Sheet_4
       rect:
         serializedVersion: 2
         x: 256
@@ -282,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01ce4f6d9e6d17c80800000000000000
-      internalID: -8326637936209236976
+      spriteID: 51d18895bdd371230800000000000000
+      internalID: 3609421638669966613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_5
+      name: Idle SlimeFire-0001-Sheet_5
       rect:
         serializedVersion: 2
         x: 320
@@ -304,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47940c67c1707e1b0800000000000000
-      internalID: -5627521390543353484
+      spriteID: dadc493d857566070800000000000000
+      internalID: 8099257018890898861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_6
+      name: Idle SlimeFire-0001-Sheet_6
       rect:
         serializedVersion: 2
         x: 384
@@ -326,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 298fa718f047f05a0800000000000000
-      internalID: -6552891322855130990
+      spriteID: 2ae1cbf076357d100800000000000000
+      internalID: 132666416141442722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_7
+      name: Idle SlimeFire-0001-Sheet_7
       rect:
         serializedVersion: 2
         x: 448
@@ -348,14 +335,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 550ca4832b87b7240800000000000000
-      internalID: 4790555335482589269
+      spriteID: 4b5461560c9806560800000000000000
+      internalID: 7304990055017629108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_8
+      name: Idle SlimeFire-0001-Sheet_8
       rect:
         serializedVersion: 2
         x: 512
@@ -370,14 +357,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 29f60724d1fe67000800000000000000
-      internalID: 33476956199612306
+      spriteID: c176c16fa02c01d60800000000000000
+      internalID: 7858994702096033564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_9
+      name: Idle SlimeFire-0001-Sheet_9
       rect:
         serializedVersion: 2
         x: 576
@@ -392,14 +379,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ce8046717c48f950800000000000000
-      internalID: 6483015713798786752
+      spriteID: 9fdcf9993221dc760800000000000000
+      internalID: 7479654500242804217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_10
+      name: Idle SlimeFire-0001-Sheet_10
       rect:
         serializedVersion: 2
         x: 640
@@ -414,14 +401,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57337bdce0db21050800000000000000
-      internalID: 5769881943893554037
+      spriteID: 384a37113da58d3c0800000000000000
+      internalID: -4334614778766711677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_11
+      name: Idle SlimeFire-0001-Sheet_11
       rect:
         serializedVersion: 2
         x: 704
@@ -436,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa8bb2cb9b9f44750800000000000000
-      internalID: 6288425555837302954
+      spriteID: 11ef83d0ab280c3a0800000000000000
+      internalID: -6647169314401485295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_12
+      name: Idle SlimeFire-0001-Sheet_12
       rect:
         serializedVersion: 2
         x: 768
@@ -458,14 +445,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff132efb17f35bcc0800000000000000
-      internalID: -3695978161404497409
+      spriteID: 8d72a3ee590992a40800000000000000
+      internalID: 5343961406473119704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_13
+      name: Idle SlimeFire-0001-Sheet_13
       rect:
         serializedVersion: 2
         x: 832
@@ -480,14 +467,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad5329dc3e259c150800000000000000
-      internalID: 5893332725750969818
+      spriteID: 7e5272d7e899c7ee0800000000000000
+      internalID: -1261964958306458137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_14
+      name: Idle SlimeFire-0001-Sheet_14
       rect:
         serializedVersion: 2
         x: 896
@@ -502,14 +489,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e94fcea02736cd90800000000000000
-      internalID: -7077909150854854170
+      spriteID: 4c2de9edac6a40b70800000000000000
+      internalID: 8864393356820533956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_15
+      name: Idle SlimeFire-0001-Sheet_15
       rect:
         serializedVersion: 2
         x: 960
@@ -524,14 +511,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d780d7aec6d83c820800000000000000
-      internalID: 2937346880905742461
+      spriteID: b3d76ef5e630e8e70800000000000000
+      internalID: 9119230068062059835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_16
+      name: Idle SlimeFire-0001-Sheet_16
       rect:
         serializedVersion: 2
         x: 1024
@@ -546,14 +533,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47f46a8ed8d82e2f0800000000000000
-      internalID: -945037331161264268
+      spriteID: 4d87aab84b239e970800000000000000
+      internalID: 8784608299181570260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_17
+      name: Idle SlimeFire-0001-Sheet_17
       rect:
         serializedVersion: 2
         x: 1088
@@ -568,14 +555,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dbfedb07600076080800000000000000
-      internalID: -9194380086592278595
+      spriteID: 2c7d23e442515b3e0800000000000000
+      internalID: -2038700010640320574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_18
+      name: Idle SlimeFire-0001-Sheet_18
       rect:
         serializedVersion: 2
         x: 1152
@@ -590,14 +577,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4ff1736028c0af340800000000000000
-      internalID: 4898241297308393460
+      spriteID: 37145bec7a6dde5f0800000000000000
+      internalID: -725687948720914061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_19
+      name: Idle SlimeFire-0001-Sheet_19
       rect:
         serializedVersion: 2
         x: 1216
@@ -612,14 +599,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 382f9f7fccbd2ccf0800000000000000
-      internalID: -233382557289680253
+      spriteID: 0fd1b51de870cbdd0800000000000000
+      internalID: -2469090185726714384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_20
+      name: Idle SlimeFire-0001-Sheet_20
       rect:
         serializedVersion: 2
         x: 1280
@@ -634,14 +621,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2d3c6e0ef066b91c0800000000000000
-      internalID: -4495887584615545902
+      spriteID: 506b59270c069a060800000000000000
+      internalID: 6965204678377584133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_21
+      name: Idle SlimeFire-0001-Sheet_21
       rect:
         serializedVersion: 2
         x: 1344
@@ -656,14 +643,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2035dd567c863ac10800000000000000
-      internalID: 2063608259882603266
+      spriteID: e7b7dac6ae2218c30800000000000000
+      internalID: 4359804304512351102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle Slime-0001-Sheet_22
+      name: Idle SlimeFire-0001-Sheet_22
       rect:
         serializedVersion: 2
         x: 1408
@@ -678,8 +665,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b793fa2a341de1950800000000000000
-      internalID: 6421800207099312507
+      spriteID: 6c6809962407db790800000000000000
+      internalID: -7512725172842887482
       vertices: []
       indices: 
       edges: []
@@ -688,7 +675,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 47d59eef2e357d6449c6aeed38d8fdcf
+    spriteID: adb5b1384d5f8164e86495a10da77e10
     internalID: 0
     vertices: []
     indices: 
@@ -698,29 +685,30 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Idle Slime-0001-Sheet_0: 5224598711881962370
-      Idle Slime-0001-Sheet_1: -5932944149088821978
-      Idle Slime-0001-Sheet_10: 5769881943893554037
-      Idle Slime-0001-Sheet_11: 6288425555837302954
-      Idle Slime-0001-Sheet_12: -3695978161404497409
-      Idle Slime-0001-Sheet_13: 5893332725750969818
-      Idle Slime-0001-Sheet_14: -7077909150854854170
-      Idle Slime-0001-Sheet_15: 2937346880905742461
-      Idle Slime-0001-Sheet_16: -945037331161264268
-      Idle Slime-0001-Sheet_17: -9194380086592278595
-      Idle Slime-0001-Sheet_18: 4898241297308393460
-      Idle Slime-0001-Sheet_19: -233382557289680253
-      Idle Slime-0001-Sheet_2: 7399247369844634521
-      Idle Slime-0001-Sheet_20: -4495887584615545902
-      Idle Slime-0001-Sheet_21: 2063608259882603266
-      Idle Slime-0001-Sheet_22: 6421800207099312507
-      Idle Slime-0001-Sheet_3: 6160928048758438849
-      Idle Slime-0001-Sheet_4: -8326637936209236976
-      Idle Slime-0001-Sheet_5: -5627521390543353484
-      Idle Slime-0001-Sheet_6: -6552891322855130990
-      Idle Slime-0001-Sheet_7: 4790555335482589269
-      Idle Slime-0001-Sheet_8: 33476956199612306
-      Idle Slime-0001-Sheet_9: 6483015713798786752
+      Idle SlimeFire-0001-Sheet_0: -8510109081832668626
+      Idle SlimeFire-0001-Sheet_1: -1614994531757665672
+      Idle SlimeFire-0001-Sheet_10: -4334614778766711677
+      Idle SlimeFire-0001-Sheet_11: -6647169314401485295
+      Idle SlimeFire-0001-Sheet_12: 5343961406473119704
+      Idle SlimeFire-0001-Sheet_13: -1261964958306458137
+      Idle SlimeFire-0001-Sheet_14: 8864393356820533956
+      Idle SlimeFire-0001-Sheet_15: 9119230068062059835
+      Idle SlimeFire-0001-Sheet_16: 8784608299181570260
+      Idle SlimeFire-0001-Sheet_17: -2038700010640320574
+      Idle SlimeFire-0001-Sheet_18: -725687948720914061
+      Idle SlimeFire-0001-Sheet_19: -2469090185726714384
+      Idle SlimeFire-0001-Sheet_2: 871695659302927731
+      Idle SlimeFire-0001-Sheet_20: 6965204678377584133
+      Idle SlimeFire-0001-Sheet_21: 4359804304512351102
+      Idle SlimeFire-0001-Sheet_22: -7512725172842887482
+      Idle SlimeFire-0001-Sheet_23: -521162575
+      Idle SlimeFire-0001-Sheet_3: 7262903999234076381
+      Idle SlimeFire-0001-Sheet_4: 3609421638669966613
+      Idle SlimeFire-0001-Sheet_5: 8099257018890898861
+      Idle SlimeFire-0001-Sheet_6: 132666416141442722
+      Idle SlimeFire-0001-Sheet_7: 7304990055017629108
+      Idle SlimeFire-0001-Sheet_8: 7858994702096033564
+      Idle SlimeFire-0001-Sheet_9: 7479654500242804217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

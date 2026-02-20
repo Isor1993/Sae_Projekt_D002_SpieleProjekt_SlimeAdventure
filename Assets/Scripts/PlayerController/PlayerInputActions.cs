@@ -127,6 +127,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChangeElement"",
+                    ""type"": ""Button"",
+                    ""id"": ""6091232a-e1ab-4dee-a755-8e87f2922a38"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -217,6 +226,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3b543730-156a-4b6c-ab5a-3cf4e5888644"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeElement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -229,6 +249,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Slime_Jump = m_Slime.FindAction("Jump", throwIfNotFound: true);
         m_Slime_Sprint = m_Slime.FindAction("Sprint", throwIfNotFound: true);
         m_Slime_Attack = m_Slime.FindAction("Attack", throwIfNotFound: true);
+        m_Slime_ChangeElement = m_Slime.FindAction("ChangeElement", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -313,6 +334,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Slime_Jump;
     private readonly InputAction m_Slime_Sprint;
     private readonly InputAction m_Slime_Attack;
+    private readonly InputAction m_Slime_ChangeElement;
     /// <summary>
     /// Provides access to input actions defined in input action map "Slime".
     /// </summary>
@@ -340,6 +362,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Slime/Attack".
         /// </summary>
         public InputAction @Attack => m_Wrapper.m_Slime_Attack;
+        /// <summary>
+        /// Provides access to the underlying input action "Slime/ChangeElement".
+        /// </summary>
+        public InputAction @ChangeElement => m_Wrapper.m_Slime_ChangeElement;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -378,6 +404,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
+            @ChangeElement.started += instance.OnChangeElement;
+            @ChangeElement.performed += instance.OnChangeElement;
+            @ChangeElement.canceled += instance.OnChangeElement;
         }
 
         /// <summary>
@@ -401,6 +430,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
+            @ChangeElement.started -= instance.OnChangeElement;
+            @ChangeElement.performed -= instance.OnChangeElement;
+            @ChangeElement.canceled -= instance.OnChangeElement;
         }
 
         /// <summary>
@@ -469,5 +501,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnAttack(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ChangeElement" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnChangeElement(InputAction.CallbackContext context);
     }
 }

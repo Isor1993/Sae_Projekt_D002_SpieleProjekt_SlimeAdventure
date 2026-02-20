@@ -15,4 +15,4 @@ MonoBehaviour:
   _type: 0
   _name: NormalShoot
   _baseDamage: 5
-  _bulletPrefab: {fileID: 1131599412314792535, guid: 66fdfbb2f61ffb244b8f57ea478fdd94, type: 3}
+  _bulletPrefab: {fileID: 1955140628866861864, guid: 66fdfbb2f61ffb244b8f57ea478fdd94, type: 3}

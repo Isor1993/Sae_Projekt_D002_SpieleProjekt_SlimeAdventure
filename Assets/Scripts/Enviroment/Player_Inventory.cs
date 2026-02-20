@@ -5,6 +5,9 @@ public class Player_Inventory : MonoBehaviour
     [SerializeField] private int _coins;
     [SerializeField] private int _evoltuionElementFire;
 
+    public int Coins=>_coins;
+    public int FireElement => _evoltuionElementFire;
+
 
     private void Awake()
     {

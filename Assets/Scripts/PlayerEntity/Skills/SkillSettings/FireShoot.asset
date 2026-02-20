@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427a08b5a5964034e89c4e579c1ba172, type: 3}
   m_Name: FireShoot
   m_EditorClassIdentifier: 
-  _type: 0
+  _type: 1
   _name: FireShoot
   _baseDamage: 5
-  _bulletPrefab: {fileID: 0}
+  _bulletPrefab: {fileID: 5777810626172743311, guid: afb561c5e43e6e441a4e73fc6ce5ce77, type: 3}

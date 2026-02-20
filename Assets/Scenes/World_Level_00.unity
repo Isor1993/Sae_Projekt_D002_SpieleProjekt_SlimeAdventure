@@ -1804,6 +1804,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b5c63ae60621a2a4bb3bb2f567f19ced, type: 2}
   _startingPlayerSkills:
   - {fileID: 11400000, guid: 98ab06862bf72d34abb5d0173cc9f59e, type: 2}
+  _spawnOffset: {x: 1, y: 0.3, z: 0}
 --- !u!114 &1047034918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1817,7 +1818,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventory: {fileID: 1047034908}
-  _maxHP: 100
+  _maxHP: 1
+  _spawnPosition: {x: 0, y: 0.7}
+  _isFireSlime: 0
 --- !u!1001 &1056605605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2633,6 +2636,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2022355626713809517, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7464991655195090906, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
+      propertyPath: _skillSystem
+      value: 
+      objectReference: {fileID: 1047034917}
+    - target: {fileID: 7464991655195090906, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
+      propertyPath: _playerEntity
+      value: 
+      objectReference: {fileID: 1047034918}
     - target: {fileID: 7658119863403918655, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
       propertyPath: m_SortingLayer
       value: 5
@@ -4116,7 +4131,7 @@ Transform:
   m_GameObject: {fileID: 2032545312}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.36, y: 0.95, z: 0}
+  m_LocalPosition: {x: 14.53, y: 0.95, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
