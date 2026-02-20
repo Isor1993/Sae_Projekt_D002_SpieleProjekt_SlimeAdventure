@@ -14,6 +14,7 @@ public class Player_Inventory : MonoBehaviour
         _coins = 0;
         _evoltuionElementFire = 0;
     }
+    
     public void AddCoin(int coin)
     {
         _coins += coin;
