@@ -2635,7 +2635,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 695375052006281683, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 22.82
       objectReference: {fileID: 0}
     - target: {fileID: 695375052006281683, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3548,6 +3548,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab81166907c917744a74648c0ea92905, type: 3}
+--- !u!1 &1938846103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9092669669056769279, guid: 2c08aa2a1dc5a3540bb10e555b174728, type: 3}
+  m_PrefabInstance: {fileID: 1267535270716586440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1938846108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938846103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88cefad393666048aa37abc76e7b882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 1
 --- !u!1001 &1941521935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4268,7 +4286,7 @@ Transform:
   m_GameObject: {fileID: 2032545312}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.53, y: 0.95, z: 0}
+  m_LocalPosition: {x: 15, y: 0.95, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4287,28 +4305,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _baseData: {fileID: 11400000, guid: 32f1d2082549bfb4086a6a0c295bd317, type: 2}
---- !u!195 &2032545318
-NavMeshAgent:
+--- !u!114 &2032545318
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032545312}
   m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 5.265
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 7.46
-  m_BaseOffset: 3.73
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7390087b73a1d6b4db7a53a7746c09bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patrolPos:
+  - {x: 13.4, y: 0.95}
+  - {x: 15, y: 0.95}
+  - {x: 13.4, y: 0.95}
+  - {x: 17.6, y: 0.95}
+  - {x: 15, y: 0.95}
+  - {x: 17.6, y: 0.95}
+  - {x: 13.4, y: 0.95}
+  _enemyState: 0
+  _enemyData: {fileID: 11400000, guid: 32f1d2082549bfb4086a6a0c295bd317, type: 2}
+  _cubeSize: {x: 1, y: 1, z: 1}
+  _color: {r: 0.44507423, g: 0.46540874, b: 0.26197535, a: 0}
 --- !u!4 &2039106780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5445766720180644767, guid: ab81166907c917744a74648c0ea92905, type: 3}
@@ -4558,6 +4578,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1624969050}
     m_Modifications:
+    - target: {fileID: 3675934056919975565, guid: 2c08aa2a1dc5a3540bb10e555b174728, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3675934056919975565, guid: 2c08aa2a1dc5a3540bb10e555b174728, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6189438013385914137, guid: 2c08aa2a1dc5a3540bb10e555b174728, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.73
@@ -4609,6 +4637,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5398082611582709792, guid: 2c08aa2a1dc5a3540bb10e555b174728, type: 3}
       insertIndex: -1
       addedObject: {fileID: 462960984}
+    - targetCorrespondingSourceObject: {fileID: 9092669669056769279, guid: 2c08aa2a1dc5a3540bb10e555b174728, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1938846108}
   m_SourcePrefab: {fileID: 100100000, guid: 2c08aa2a1dc5a3540bb10e555b174728, type: 3}
 --- !u!4 &1888289500990639954
 Transform:

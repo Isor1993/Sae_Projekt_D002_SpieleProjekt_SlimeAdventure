@@ -15,3 +15,8 @@ MonoBehaviour:
   _name: Goblin
   _maxHP: 100
   _damage: 1
+  _speed: 1
+  _detectionRange: 1
+  _targetAttackable:
+    serializedVersion: 2
+    m_Bits: 0

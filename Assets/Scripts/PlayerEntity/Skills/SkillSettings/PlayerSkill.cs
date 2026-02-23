@@ -52,7 +52,7 @@ public class PlayerSkill
         Bullet bullet=projectile.GetComponentInChildren<Bullet>();
         if (bullet == null)
             return;
-        bullet.Initialize(_damage,dir);
+        bullet.Initialize(_damage,dir,_type);
        
 #if DEBUG
         Debug.Log($"Cast {_name} with Projectile {projectile.name} with [{_damage}]");
@@ -118,4 +118,6 @@ public class PlayerSkill
     {
         _bulletPrefab = bulletPrefab;
     }
+
+    
 }
