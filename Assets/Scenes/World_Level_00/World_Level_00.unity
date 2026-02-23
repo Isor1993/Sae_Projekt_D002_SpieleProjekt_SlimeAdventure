@@ -2635,11 +2635,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 695375052006281683, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.82
+      value: -1.09
       objectReference: {fileID: 0}
     - target: {fileID: 695375052006281683, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 695375052006281683, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2688,6 +2688,10 @@ PrefabInstance:
     - target: {fileID: 2022355626713809517, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022355626713809517, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2022355626713809517, guid: 5710e46fff6f54a49921278fc7edf383, type: 3}
       propertyPath: m_TagString
@@ -4286,7 +4290,7 @@ Transform:
   m_GameObject: {fileID: 2032545312}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 0.95, z: 0}
+  m_LocalPosition: {x: 14.97, y: 0.95, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4305,6 +4309,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _baseData: {fileID: 11400000, guid: 32f1d2082549bfb4086a6a0c295bd317, type: 2}
+  _detectionRange: 5
+  _attackableTargets:
+    serializedVersion: 2
+    m_Bits: 128
+  _boxCastSize: {x: 0.1, y: 0.74}
+  _color: {r: 0.10341112, g: 0.06512786, b: 0.5597484, a: 0.5137255}
 --- !u!114 &2032545318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4325,10 +4335,13 @@ MonoBehaviour:
   - {x: 15, y: 0.95}
   - {x: 17.6, y: 0.95}
   - {x: 13.4, y: 0.95}
-  _enemyState: 0
   _enemyData: {fileID: 11400000, guid: 32f1d2082549bfb4086a6a0c295bd317, type: 2}
-  _cubeSize: {x: 1, y: 1, z: 1}
-  _color: {r: 0.44507423, g: 0.46540874, b: 0.26197535, a: 0}
+  _enemyState: 0
+  _enemyPos: {x: 14, y: 0}
+  _borderLeft: 13.13
+  _borderRight: 18.7
+  _cubeSize: {x: 0.1, y: 0.1, z: 0.1}
+  _color: {r: 0, g: 0.07588434, b: 1, a: 1}
 --- !u!4 &2039106780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5445766720180644767, guid: ab81166907c917744a74648c0ea92905, type: 3}

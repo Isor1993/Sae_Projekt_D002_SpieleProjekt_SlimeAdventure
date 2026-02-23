@@ -39,6 +39,9 @@ public class PatrolRoute : MonoBehaviour
     [SerializeField] private EnemyState _enemyState = EnemyState.Patrol;
     [Tooltip("Target position used for chasing (Attack state). ")]
     [SerializeField] private Vector2 _enemyPos;
+    [Header(" Min/Max Hunt Range")]
+    [SerializeField] private float _borderLeft;
+    [SerializeField] private float _borderRight;
 
     //--- Gizmo Settings ---
 
@@ -55,9 +58,6 @@ public class PatrolRoute : MonoBehaviour
     private float _dirX;
     private float _huntingSpeed;
     private SpriteRenderer _spriteRenderer;
-    private float _borderLeft;
-    private float _borderRight;
-
     /// <summary>
     /// 
     /// </summary>
