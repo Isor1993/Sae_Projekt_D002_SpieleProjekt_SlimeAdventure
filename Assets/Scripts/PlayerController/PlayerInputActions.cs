@@ -136,6 +136,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Paused"",
+                    ""type"": ""Button"",
+                    ""id"": ""32169d10-b02f-452f-a7f7-ec2a7dec2a83"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -237,6 +246,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""ChangeElement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""94f267bc-b809-416b-a427-8dee926d9342"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Paused"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -250,6 +270,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Slime_Sprint = m_Slime.FindAction("Sprint", throwIfNotFound: true);
         m_Slime_Attack = m_Slime.FindAction("Attack", throwIfNotFound: true);
         m_Slime_ChangeElement = m_Slime.FindAction("ChangeElement", throwIfNotFound: true);
+        m_Slime_Paused = m_Slime.FindAction("Paused", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -335,6 +356,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Slime_Sprint;
     private readonly InputAction m_Slime_Attack;
     private readonly InputAction m_Slime_ChangeElement;
+    private readonly InputAction m_Slime_Paused;
     /// <summary>
     /// Provides access to input actions defined in input action map "Slime".
     /// </summary>
@@ -366,6 +388,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Slime/ChangeElement".
         /// </summary>
         public InputAction @ChangeElement => m_Wrapper.m_Slime_ChangeElement;
+        /// <summary>
+        /// Provides access to the underlying input action "Slime/Paused".
+        /// </summary>
+        public InputAction @Paused => m_Wrapper.m_Slime_Paused;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -407,6 +433,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @ChangeElement.started += instance.OnChangeElement;
             @ChangeElement.performed += instance.OnChangeElement;
             @ChangeElement.canceled += instance.OnChangeElement;
+            @Paused.started += instance.OnPaused;
+            @Paused.performed += instance.OnPaused;
+            @Paused.canceled += instance.OnPaused;
         }
 
         /// <summary>
@@ -433,6 +462,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @ChangeElement.started -= instance.OnChangeElement;
             @ChangeElement.performed -= instance.OnChangeElement;
             @ChangeElement.canceled -= instance.OnChangeElement;
+            @Paused.started -= instance.OnPaused;
+            @Paused.performed -= instance.OnPaused;
+            @Paused.canceled -= instance.OnPaused;
         }
 
         /// <summary>
@@ -508,5 +540,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnChangeElement(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Paused" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPaused(InputAction.CallbackContext context);
     }
 }

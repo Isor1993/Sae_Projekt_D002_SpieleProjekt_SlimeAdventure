@@ -1,11 +1,14 @@
 /*****************************************************************************
 * Project : Spielprojekt (K1, S1, S2, S3)
-* File    : 
+* File    : Animation_Floating_Items.cs
 * Date    : 20.02.2026
 * Author  : Eric Rosenberg
 *
 * Description :
-* *
+* Handles step-based floating animation using a list of positions.
+* Interpolates between defined AnimationPara entries over time.
+* Supports optional looping and editor gizmo visualization.
+*
 * History :
 * 20.02.2026 ER Created
 ******************************************************************************/
@@ -19,12 +22,14 @@ using UnityEditor;
 public class Animation_Floating_Items : MonoBehaviour
 {
     [Header("References")]
-    [Tooltip("List of the animation steps")]
+    [Tooltip("List of the animation steps.")]
     [SerializeField] private List<AnimationPara> _pos;
-    [Tooltip("Enable/Disable loop for the animation")]
+
+    [Tooltip("Enable/Disable loop for the animation.")]
     [SerializeField] private bool _isLoop = false;
+
     [Header("Debug Parameter")]
-    [Tooltip("Change the size of stePositions on gizmo")]
+    [Tooltip("Change the size of stePositions on gizmo.")]
     [Range(0f, 0.5f)]
     [SerializeField] float _gizmosSphereSize = 1f;
 
@@ -37,7 +42,9 @@ public class Animation_Floating_Items : MonoBehaviour
     private float _elapsedTime;
 
     /// <summary>
-    /// 
+    /// Validates the animation step list and initializes
+    /// the first animation step.
+    /// Disables the component if no steps are defined.
     /// </summary>
     private void Awake()
     {
@@ -52,7 +59,10 @@ public class Animation_Floating_Items : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// Updates the animation each frame.
+    /// Interpolates between the current and target position
+    /// based on elapsed time and duration.
+    /// Advances to the next step when finished.
     /// </summary>
     private void Update()
     {
@@ -67,7 +77,6 @@ public class Animation_Floating_Items : MonoBehaviour
 
         Vector2 newPos = Vector2.Lerp(_currenPosition, _targetPos, _t);
         transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
-
         
         if (_t >= 1)
         {
@@ -75,6 +84,10 @@ public class Animation_Floating_Items : MonoBehaviour
         }
     }
 #if UNITY_EDITOR
+    /// <summary>
+    /// Draws gizmos in the Scene view to visualize
+    /// animation target positions and their order.
+    /// </summary>
     private void OnDrawGizmos()
     {
         var index = 0;
@@ -91,7 +104,9 @@ public class Animation_Floating_Items : MonoBehaviour
 #endif//UNITY_EDITOR
 
     /// <summary>
-    /// 
+    /// Prepares the current animation step.
+    /// Sets duration, starting position, and target position
+    /// based on the current step index.
     /// </summary>
     private void PrepareStep()
     {
@@ -103,7 +118,9 @@ public class Animation_Floating_Items : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// Advances to the next animation step.
+    /// If the end of the list is reached,
+    /// either loops back to the start or disables the component.
     /// </summary>
     private void AdvanceStep()
     {

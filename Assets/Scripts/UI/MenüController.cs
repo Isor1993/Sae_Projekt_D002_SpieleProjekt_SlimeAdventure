@@ -12,7 +12,6 @@
 * History :
 * 20.02.2026 ER Created
 ******************************************************************************/
-
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -61,6 +60,7 @@ public class MenüController : MonoBehaviour
 
     [Tooltip("Multiplier applied to menu animation speed.")]
     [SerializeField] private float _animationSpeedMultiplicator;
+
 
     //--- Fields ---
     private PanelAnimator _mainMenüPA;
@@ -199,6 +199,11 @@ public class MenüController : MonoBehaviour
         SwitchtoNextPanel(currentPanel, _mainMenuPanel, _mainMenuFirstButton);       
         _mainMenüPA.SlideIn();
         currentPanel.GetComponent<PanelAnimator>().ResetPosition();
+    }
+
+    public void ClickNewGame()
+    {
+        GameBootstrapper.Instance.NewGame();
     }
 
     /// <summary>

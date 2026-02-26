@@ -15,6 +15,7 @@
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Data container holding all relevant state information required
@@ -71,6 +72,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private WallCheck _wallCheck;
     [SerializeField] private PlayerSkillSystem _skillSystem;
     [SerializeField] private PlayerEntity _playerEntity;
+    [SerializeField] private GameObject _pausedPannel;
 
     private MoveBehaviour _movement;
     private JumpBehaviour _jumpBehaviour;
@@ -93,6 +95,7 @@ public class PlayerController : MonoBehaviour
     private InputAction _sprint;
     private InputAction _attack;
     private InputAction _changeElement;
+   
 
     /// <summary>
     /// Initializes input mappings and behaviour components.
@@ -222,6 +225,7 @@ public class PlayerController : MonoBehaviour
         {
             _isSprinting = false;
         }
+       
     }
 
     /// <summary>
@@ -373,6 +377,6 @@ public class PlayerController : MonoBehaviour
         _jump = _inputActions.Slime.Jump;
         _sprint = _inputActions.Slime.Sprint;
         _attack=_inputActions.Slime.Attack;
-        _changeElement=_inputActions.Slime.ChangeElement;
+        _changeElement=_inputActions.Slime.ChangeElement;      
     }
 }

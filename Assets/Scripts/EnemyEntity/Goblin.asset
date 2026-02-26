@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Goblin
   m_EditorClassIdentifier: 
   _name: Goblin
-  _maxHP: 100
+  _maxHP: 50
   _damage: 1
   _speed: 1
   _huntingSpeed: 1.7

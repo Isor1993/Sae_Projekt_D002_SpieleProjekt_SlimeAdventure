@@ -15,7 +15,7 @@
 ******************************************************************************/
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
+
 
 /// <summary>
 /// Defines the available movement states for the enemy.
@@ -31,16 +31,21 @@ public class PatrolRoute : MonoBehaviour
     [Header("Settings")]
     [Tooltip("Patrol route points in order (world positions).")]
     [SerializeField] private List<Vector2> _patrolPos = new List<Vector2>();
+
     [Tooltip("Enemy data ScriptableObject (e.g., speed).")]
     [SerializeField] private EnemyData _enemyData;
 
     [Header("Special Debug Settings")]
     [Tooltip("Defines whether the enemy is patrolling or chasing a target.")]
     [SerializeField] private EnemyState _enemyState = EnemyState.Patrol;
+
     [Tooltip("Target position used for chasing (Attack state). ")]
     [SerializeField] private Vector2 _enemyPos;
+
     [Header(" Min/Max Hunt Range")]
+
     [SerializeField] private float _borderLeft;
+
     [SerializeField] private float _borderRight;
 
     //--- Gizmo Settings ---
@@ -48,21 +53,23 @@ public class PatrolRoute : MonoBehaviour
     [Header("Gizmo Draw Settings")]
     [Tooltip("Size of the gizmo markers.")]
     [SerializeField] private Vector3 _cubeSize;
+
     [Tooltip("Color used for patrol route gizmos.")]
     [SerializeField] private Color _color;
 
     //--- Fields ---
     private Rigidbody2D _rb;
+    private SpriteRenderer _spriteRenderer;
     private float _speed = 1;
     private int _indexPos = 0;
     private float _dirX;
     private float _huntingSpeed;
-    private SpriteRenderer _spriteRenderer;
+
     /// <summary>
-    /// 
+    /// Gets the current horizontal movement direction.
+    /// -1 = left, 1 = right.
     /// </summary>
     public float DirX => _dirX;
-
 
     /// <summary>
     /// Caches required components and loads configuration values.
@@ -70,10 +77,7 @@ public class PatrolRoute : MonoBehaviour
     private void Awake()
     {
         MappingData();
-
     }
-
-
 
     /// <summary>
     /// Loads configuration values from EnemyData and caches component references.
