@@ -134,6 +134,7 @@ public class MenüController : MonoBehaviour
     /// </summary>
     private void FadeInMainMenü()
     {
+       
         _hasSwitched = true;
 
         SwitchtoNextPanel(_startScreenPanel, _mainMenuPanel, _mainMenuFirstButton);
@@ -202,7 +203,9 @@ public class MenüController : MonoBehaviour
     }
 
     public void ClickNewGame()
-    {
+    {      
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         GameBootstrapper.Instance.NewGame();
     }
 

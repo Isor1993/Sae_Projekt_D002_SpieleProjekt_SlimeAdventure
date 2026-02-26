@@ -91,6 +91,8 @@ public class IngameUiController : MonoBehaviour
     /// </summary>
     public void PressContinueButton()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible=false;
         _BreakMenuPannel.SetActive(false);
       
         Time.timeScale = 1f;
@@ -117,6 +119,8 @@ public class IngameUiController : MonoBehaviour
     /// </summary>
     private void TogglePause()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         _isPaused = !_isPaused;
 
         _BreakMenuPannel.SetActive(_isPaused);

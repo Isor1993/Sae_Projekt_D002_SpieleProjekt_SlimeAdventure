@@ -183,8 +183,7 @@ public class PlayerController : MonoBehaviour
     {
         if (JustHitWall)
         {
-            ResetAirJumpCounter();
-            Debug.Log("Player landed on Wall.");
+            ResetAirJumpCounter();           
         }
         if (JustLeftWall)
         {

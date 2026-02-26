@@ -63,15 +63,13 @@ public class JumpBehaviour
         if (CanWallJump(JumpState.IsTouchingWall, JumpState.IsGrounded, JumpState.WallJumpEnabled))
         {
             PerformJumpPhysic();
-            _jumpCountAir++;
-            Debug.Log("Player jumped from wall.");
+            _jumpCountAir++;           
             return true;
         }
         if (CanJumpInAir(JumpState.IsGrounded, JumpState.MultiJumpEnabled))
         {
             PerformJumpPhysic();
-            _jumpCountAir++;
-            Debug.Log("Player jumped in air.");
+            _jumpCountAir++;           
             return true;
         }
         return false;
