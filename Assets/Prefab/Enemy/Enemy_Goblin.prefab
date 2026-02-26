@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2237916768244671274
+--- !u!1 &8465971081772638219
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6906459706144945909}
-  - component: {fileID: 3052928913055108281}
-  - component: {fileID: 4687499415515064296}
-  - component: {fileID: 5895277203517602662}
-  - component: {fileID: 8900824532471821183}
-  - component: {fileID: 2507261921755963035}
+  - component: {fileID: 6099448533209361848}
+  - component: {fileID: 8576957039708489711}
+  - component: {fileID: 6701714840735114582}
+  - component: {fileID: 4573022024763582579}
+  - component: {fileID: 3455748607297313265}
+  - component: {fileID: 101171662973542136}
   m_Layer: 0
   m_Name: Enemy_Goblin
   m_TagString: Untagged
@@ -21,13 +21,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6906459706144945909
+--- !u!4 &6099448533209361848
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2237916768244671274}
+  m_GameObject: {fileID: 8465971081772638219}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -472.515, y: -269.525, z: 0}
@@ -36,14 +36,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &3052928913055108281
+--- !u!50 &8576957039708489711
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2237916768244671274}
+  m_GameObject: {fileID: 8465971081772638219}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -63,13 +63,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!212 &4687499415515064296
+--- !u!212 &6701714840735114582
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2237916768244671274}
+  m_GameObject: {fileID: 8465971081772638219}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -118,13 +118,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5895277203517602662
+--- !u!61 &4573022024763582579
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2237916768244671274}
+  m_GameObject: {fileID: 8465971081772638219}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -164,13 +164,13 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 10.53, y: 7.46}
   m_EdgeRadius: 0
---- !u!114 &8900824532471821183
+--- !u!114 &3455748607297313265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2237916768244671274}
+  m_GameObject: {fileID: 8465971081772638219}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 036cc688527ab5c499c01732e2a7107b, type: 3}
@@ -184,13 +184,13 @@ MonoBehaviour:
     m_Bits: 128
   _boxCastSize: {x: 0.1, y: 0.74}
   _color: {r: 0.10341112, g: 0.06512786, b: 0.5597484, a: 0.5137255}
---- !u!114 &2507261921755963035
+--- !u!114 &101171662973542136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2237916768244671274}
+  m_GameObject: {fileID: 8465971081772638219}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7390087b73a1d6b4db7a53a7746c09bc, type: 3}
@@ -206,7 +206,7 @@ MonoBehaviour:
   - {x: 13.4, y: 0.95}
   _enemyData: {fileID: 11400000, guid: 32f1d2082549bfb4086a6a0c295bd317, type: 2}
   _enemyState: 0
-  _enemyPos: {x: 14, y: 0}
+  _enemyPos: {x: 0, y: 0}
   _borderLeft: 13.13
   _borderRight: 17
   _cubeSize: {x: 0.1, y: 0.1, z: 0.1}

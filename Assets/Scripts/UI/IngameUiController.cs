@@ -15,6 +15,7 @@
 ******************************************************************************/
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class IngameUiController : MonoBehaviour
@@ -37,6 +38,8 @@ public class IngameUiController : MonoBehaviour
 
     [Tooltip("UI panel that represents the break (pause) menu.")]
     [SerializeField] private GameObject _BreakMenuPannel;
+    [Tooltip("Continue buttom from paused Menu.")]
+    [SerializeField] private GameObject _continueBottom;
 
     private PlayerInputActions _inputActions;
     private InputAction _paused;
@@ -65,7 +68,8 @@ public class IngameUiController : MonoBehaviour
         _elementText.text = "x" + _inventory.FireElement;
     
         if(_paused.WasPressedThisFrame())
-        {           
+        {
+            EventSystem.current.SetSelectedGameObject(_continueBottom);
             TogglePause();
         }
     }
@@ -88,6 +92,7 @@ public class IngameUiController : MonoBehaviour
     public void PressContinueButton()
     {
         _BreakMenuPannel.SetActive(false);
+      
         Time.timeScale = 1f;
         _isPaused = false;
     }

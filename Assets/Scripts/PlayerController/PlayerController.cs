@@ -198,13 +198,18 @@ public class PlayerController : MonoBehaviour
     public void UpdateInput()
     {
         _horizentalInput = _move.ReadValue<float>();
-        
+
+
+        if (Mathf.Abs(_horizentalInput) < 0.2f)
+        {
+            _horizentalInput = 0f;
+        }
 
         if (_horizentalInput != 0f)
         {
-            _lastDir = _horizentalInput;
+            _lastDir = Mathf.Sign(_horizentalInput);
         }
-        if(_changeElement.WasPressedThisFrame())
+        if (_changeElement.WasPressedThisFrame())
         {
             _playerEntity.ChangeSlimeElement();
         }
